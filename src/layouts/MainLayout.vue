@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <!--<q-header elevated>
       <q-toolbar class="bg-black text-white  shadow-2">
         <span v-for="(link, index) in essentialLinks">
           <q-separator dark vertical/>
@@ -16,7 +16,7 @@
         <q-space/>
         Aionsoft 1.0.0v
       </q-toolbar>
-    </q-header>
+    </q-header>-->
     <q-page-container>
       <router-view/>
     </q-page-container>

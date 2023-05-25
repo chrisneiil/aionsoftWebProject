@@ -1,87 +1,53 @@
 <template>
-  <div class="imgBackground">
-    <div class="column items-center">
-      <img
-        src="../../assets/imgs/logo-fullhd.png"
-        style="width: 50%;height: 150px"
-      >
+  <div>
+    <div class="imgBackground text-white">
+      <div class=" row q-pt-none" style="background: rgba(25,118,210,0.66);height: 550px;">
+        <div class="col  " style="">
+          <div class="column items-center ">
+            <img
+              src="../../assets/imgs/logo-fullhd.png"
+              style="width: 45%;height: 125px"
+            >
+            <h4 class="text-center" style="height: 50px">
+              Brindamos servicios <br>
+              informaticos ofreciendo
+            </h4>
+            <div class="flex justify-between">
+              <span class="word ">
+                  Calidad
+                </span>
+              <span class="word q-mx-lg">
+                  Excelente servicio
+                </span>
+              <span class="word">
+                  Aplicaciones flexibles para el usuario
+                </span>
+              <span class="word q-mx-lg">
+                  Mayor productivodad
+                </span>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <card-formulario-contacto/>
+        </div>
+        <div class="col-1 q-mt-none">
+
+        </div>
+
+      </div>
+      <div class="row" style="height: 3000px ;background: #2b84da">a</div>
+      <div>XD</div>
+      <q-footer class="text-white bg-black"> Todos los derechos reservados.</q-footer>
     </div>
-    <div class="q-pa-md row " style="height: 250px;">
-      <div class="col" style="">
-        <q-parallax :height="200" :speed="0.8" style="border: white 2px solid">
-          <template v-slot:media>
-            <img src="../../assets/imgs/administracion.jpg">
-          </template>
-
-          <h1 class="text-white">¿Por que Aionsoft?</h1>
-        </q-parallax>
-      </div>
-      <div class="col ">
-        <q-carousel
-
-          v-model="slide"
-          transition-prev="scale"
-          transition-next="scale"
-          swipeable
-          animated
-          control-color="white"
-          navigation
-          padding
-          height="200px"
-          navigation-position="top"
-          style="background: rgba(169,169,169,0.0);border: white 2px solid"
-          class="shadow-1 rounded-borders"
-        >
-          <template v-slot:navigation-icon="{ active, btnProps, onClick }">
-            <q-btn v-if="active" size="lg" icon="home" color="yellow" flat round dense @click="onClick"/>
-            <q-btn v-else size="sm" :icon="btnProps.icon" color="white" flat round dense @click="onClick"/>
-          </template>
-
-          <q-carousel-slide name="style" class="column no-wrap text-white">
-            <q-icon name="style" size="56px"/>
-            <div class="q-mt-md  ">
-              <h5>AionSoft Ltda. desarrollo de Software a medida:</h5>
-              Somos una empresa dedicada a la creación de Software ajustado a las necesidades nuestros clientes, destacándonos por desarrollar aplicaciones para multiples plataformas, entre ellas Web, escritorio y móvil.
-              <br>
-              <h5>Misión</h5>
-              <br>
-              Entregar un producto final de calidad que sobrepase las expectativas de nuestros clientes, cumpliendo con los plazos establecidos e integrando tecnologías de vanguardia en el desarrollo.
-              <br>
-              Visión
-              Ser una empresa que evolucione constantemente con el fin de mejorar nuestros procesos, la calidad de los productos entregados y de esta manera, posicionar a la región como un actor relevante en el desarrollo de soluciones de Software dentro del país.
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="tv" class="column no-wrap text-white">
-            <q-icon name="live_tv" size="56px"/>
-            <div class="q-mt-md text-center text-white">
-              {{ lorem }}
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="layers" class="column no-wrap text-white">
-            <q-icon name="layers" size="56px"/>
-            <div class="q-mt-md text-center text-white">
-              {{ lorem }}
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="map" class="column no-wrap text-white">
-            <q-icon name="terrain" size="56px"/>
-            <div class="q-mt-md text-center text-white">
-              {{ lorem }}
-            </div>
-          </q-carousel-slide>
-        </q-carousel>
-      </div>
-
-    </div><div class="row" style="height: 300px">a</div>
-    <q-footer class="text-white bg-black"> Todos los derechos reservados.</q-footer>
+    asdasd
   </div>
 </template>
 
 <script setup lang="ts">
+import CardFormularioContacto from "components/contacto/CardFormularioContacto.vue";
 import {ref} from "vue";
-
-const slide = ref('style')
-const lorem = ref('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.')
 
 </script>
 
@@ -93,18 +59,25 @@ const lorem = ref('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ita
   }
 }
 
-.imgBackgroundAionsoft {
-  background: black;
-  background-image: url("../../assets/imgs/330M.gif");
+.imgBackground {
+  max-height: 1080px;
+  background-image: url("../../assets/imgs/group-diverse-people-having-business-meeting.jpg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.imgBackground {
-  height: 100%;
-  background: black;
-  background-image: url("../../assets/imgs/7ZN3.gif");
-  background-repeat: no-repeat;
-  background-position: center center;
+@keyframes scaleAnimation {
+  100%, 150% {
+    font-size: 20px;
+    color: deepskyblue
+  }
+  60% {
+    font-size: 24px;
+
+  }
+}
+
+.word {
+  animation: scaleAnimation 6s infinite;
 }
 </style>
